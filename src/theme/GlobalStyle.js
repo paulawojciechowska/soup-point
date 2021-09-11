@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Urbanist', sans-serif;
         margin: 0;
         padding: 0;
+        overflow-y: hidden;
     }
 
     a, button {
