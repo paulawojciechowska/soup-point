@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
         overflow-y: hidden;
     }
 
-    a, button {
+    a, button, input {
         font-family: 'Urbanist', sans-serif;
     }
 `;
