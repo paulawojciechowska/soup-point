@@ -4,6 +4,7 @@ import BackgroundMain from 'components/molecules/BackgroundMain/BackgroundMain';
 import Navigation from 'components/organisms/Navigation/Navigation';
 import { Switch, Route } from 'react-router-dom';
 import { Wrapper, WrapperDark, InfoPlate } from './Root.styles';
+import SignUp from 'components/organisms/SignUp/SignUp';
 
 const Root = () => {
   return (
@@ -18,7 +19,7 @@ const Root = () => {
               <h1>main page</h1>
             </Route>
             <Route path="/sign">
-              <h1>signUp</h1>
+              <SignUp />
             </Route>
             <Route path="/delivery">
               <h1>delivery</h1>

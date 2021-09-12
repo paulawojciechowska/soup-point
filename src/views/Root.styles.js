@@ -19,10 +19,8 @@ export const InfoPlate = styled.div`
   transform: translate(-50%, -50%);
   width: 75vw;
   height: 80vh;
+  min-height: 540px;
   border-radius: 45px;
   box-shadow: 0 0 3.5em ${({ theme }) => theme.colors.brownDark};
   background-color: transparent;
-  h1 {
-    margin: 50px;
-  }
 `;
