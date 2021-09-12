@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   position: relative;
 `;
 export const WrapperDark = styled.div`
-  background-color: ${({ theme }) => theme.colors.brown};
+  background-color: ${({ theme }) => theme.colors.lightBrown};
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -22,4 +22,7 @@ export const InfoPlate = styled.div`
   border-radius: 45px;
   box-shadow: 0 0 3.5em ${({ theme }) => theme.colors.brownDark};
   background-color: transparent;
+  h1 {
+    margin: 50px;
+  }
 `;

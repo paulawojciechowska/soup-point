@@ -4,15 +4,19 @@ export const theme = {
     lightGrey: '#F7F8FA',
     grey: '#C0C7D6',
     darkGrey: '#737C8E',
-    brown: '9f651d',
+    lightBrown: '#F6ECD3',
+    brown: '#9F651D',
     brownDark: '#2B1201',
     black: '#111111',
-    lightPurple: '#f6ecd3',
+    orange: '#F7992A',
   },
-  fontSize: {
+  font: {
     xl: '25px',
-    l: '17px',
+    l: '20px',
     m: '12px',
     s: '11px',
+    regular: '300',
+    semibold: '500',
+    bold: '700',
   },
 };
