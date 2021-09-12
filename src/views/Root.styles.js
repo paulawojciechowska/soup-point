@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   position: relative;
 `;
 export const WrapperDark = styled.div`
-  background-color: ${({ theme }) => theme.colors.brown};
+  background-color: ${({ theme }) => theme.colors.lightBrown};
   width: 100vw;
   height: 100vh;
   position: fixed;
