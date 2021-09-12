@@ -13,8 +13,8 @@ const NavLinks = ({ isOpen }) => (
     <StyledHeading as={NavLink} to="/order">
       Order
     </StyledHeading>
-    <StyledHeading as={NavLink} to="/sign">
-      SignIn
+    <StyledHeading as={NavLink} to="/login">
+      Login
     </StyledHeading>
   </LinksWrapper>
 );

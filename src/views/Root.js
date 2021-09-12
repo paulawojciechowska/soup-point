@@ -21,6 +21,9 @@ const Root = () => {
             <Route path="/sign">
               <SignUp />
             </Route>
+            <Route path="/login">
+              <h1>Login</h1>
+            </Route>
             <Route path="/delivery">
               <h1>delivery</h1>
             </Route>
