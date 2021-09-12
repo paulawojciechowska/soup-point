@@ -22,4 +22,7 @@ export const InfoPlate = styled.div`
   border-radius: 45px;
   box-shadow: 0 0 3.5em ${({ theme }) => theme.colors.brownDark};
   background-color: transparent;
+  h1 {
+    margin: 50px;
+  }
 `;
