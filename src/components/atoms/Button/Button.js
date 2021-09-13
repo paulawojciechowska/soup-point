@@ -10,4 +10,8 @@ export const Button = styled.button`
   font-size: ${({ theme }) => theme.font.m};
   margin-top: 15px;
   cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

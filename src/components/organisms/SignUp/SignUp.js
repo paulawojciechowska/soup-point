@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Header } from 'components/atoms/Header/Header';
 import { Input } from 'components/atoms/Input/Input';
 import { Button } from 'components/atoms/Button/Button';
@@ -19,7 +20,9 @@ const SignUp = () => (
       By signing up you accept the Terms of Service and Privacy Policy.
     </Paragraph>
     <Paragraph>Already have an account?</Paragraph>
-    <Button>Login</Button>
+    <Button as={NavLink} to="/login">
+      Login
+    </Button>
   </Wrapper>
 );
 
