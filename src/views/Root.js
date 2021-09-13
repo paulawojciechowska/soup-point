@@ -5,6 +5,7 @@ import Navigation from 'components/organisms/Navigation/Navigation';
 import { Switch, Route } from 'react-router-dom';
 import { Wrapper, WrapperDark, InfoPlate } from './Root.styles';
 import SignUp from 'components/organisms/SignUp/SignUp';
+import LogIn from 'components/organisms/LogIn/LogIn';
 
 const Root = () => {
   return (
@@ -20,6 +21,9 @@ const Root = () => {
             </Route>
             <Route path="/sign">
               <SignUp />
+            </Route>
+            <Route path="/login">
+              <LogIn />
             </Route>
             <Route path="/delivery">
               <h1>delivery</h1>
