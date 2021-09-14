@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import { Wrapper, WrapperDark, InfoPlate } from './Root.styles';
 import SignUp from 'components/organisms/SignUp/SignUp';
 import LogIn from 'components/organisms/LogIn/LogIn';
+import Home from 'components/organisms/Home/Home';
 
 const Root = () => {
   return (
@@ -17,7 +18,7 @@ const Root = () => {
           <Navigation />
           <Switch>
             <Route exact path="/">
-              <h1>main page</h1>
+              <Home />
             </Route>
             <Route path="/sign">
               <SignUp />
