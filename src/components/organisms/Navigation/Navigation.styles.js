@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 25px 50px;
+  z-index: 88888;
 `;
 export const NavigationMenu = styled(BiMenuAltRight)`
   color: white;

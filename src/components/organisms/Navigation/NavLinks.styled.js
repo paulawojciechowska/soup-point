@@ -13,6 +13,7 @@ export const LinksWrapper = styled.ul`
   transform: ${({ isOpen }) => (isOpen ? 'scale(1)' : 'scale(0)')};
   transform-origin: right top;
   transition: transform 0.6s ease-in-out;
+  z-index: 888888;
 `;
 export const StyledHeading = styled.h1`
   text-decoration: none;
