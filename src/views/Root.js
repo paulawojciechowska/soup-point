@@ -27,11 +27,11 @@ const Root = () => {
             <Route path="/login">
               <LogIn />
             </Route>
-            <Route path="/delivery">
-              <h1>delivery</h1>
-            </Route>
             <Route path="/order">
               <Order />
+            </Route>
+            <Route path="/cart">
+              <h1>cart</h1>
             </Route>
           </Switch>
         </InfoPlate>

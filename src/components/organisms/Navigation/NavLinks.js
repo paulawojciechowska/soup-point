@@ -7,11 +7,11 @@ const NavLinks = ({ isOpen }) => (
     <StyledHeading exact as={NavLink} to="/">
       Home
     </StyledHeading>
-    <StyledHeading as={NavLink} to="/delivery">
-      Delivery
-    </StyledHeading>
     <StyledHeading as={NavLink} to="/order">
       Order
+    </StyledHeading>
+    <StyledHeading as={NavLink} to="/cart">
+      Cart
     </StyledHeading>
     <StyledHeading as={NavLink} to="/login">
       Login

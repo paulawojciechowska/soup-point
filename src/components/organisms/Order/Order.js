@@ -19,16 +19,22 @@ const Order = () => {
     <Wrapper>
       <Header>Make your order</Header>
       <Form onSubmit={handleSubmit(formSubmit)}>
-        <Paragraph orange>Soup</Paragraph>
+        <Paragraph small orange>
+          Soup
+        </Paragraph>
         <Select name="flavour" options={flavours} {...register('flavour', { required: true })} />
-        {errors.flavour  && <span role="alert">Pick flavour!</span>}
+        {errors.flavour && <span role="alert">Pick flavour!</span>}
         <Select name="additive" options={additives} {...register('additive')} />
-        <Paragraph orange>Where to deliver?</Paragraph>
+        <Paragraph small orange>
+          Where to deliver?
+        </Paragraph>
         <Input placeholder="*Street" {...register('street', { required: true })} />
         {errors.street && <span role="alert">Street is required</span>}
         <Input placeholder="*Number" {...register('number', { required: true })} />
         {errors.number && <span role="alert">Number is required</span>}
-        <Paragraph orange>When to deliver? (10:00 - 18:00)</Paragraph>
+        <Paragraph small orange>
+          When to deliver? (10:00 - 18:00)
+        </Paragraph>
         <Input style={{ display: 'flex', flexDirection: 'row' }} type="time" min="10:00" max="18:00" placeholder="*Time" {...register('time')} />
         <Button>Order a soup</Button>
       </Form>
