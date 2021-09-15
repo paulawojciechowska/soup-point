@@ -7,6 +7,7 @@ import { Wrapper, WrapperDark, InfoPlate } from './Root.styles';
 import SignUp from 'components/organisms/SignUp/SignUp';
 import LogIn from 'components/organisms/LogIn/LogIn';
 import Home from 'components/organisms/Home/Home';
+import Order from 'components/organisms/Order/Order';
 
 const Root = () => {
   return (
@@ -26,11 +27,11 @@ const Root = () => {
             <Route path="/login">
               <LogIn />
             </Route>
-            <Route path="/delivery">
-              <h1>delivery</h1>
-            </Route>
             <Route path="/order">
-              <h1>order</h1>
+              <Order />
+            </Route>
+            <Route path="/cart">
+              <h1>cart</h1>
             </Route>
           </Switch>
         </InfoPlate>
