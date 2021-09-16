@@ -2,8 +2,12 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const Svg = styled.svg`
+  margin-left: 15vw;
   width: 200px;
   height: auto;
+  @media (max-width: 1190px) {
+    display: none;
+  }
 `;
 const move = keyframes`
     0% {
@@ -16,7 +20,6 @@ const move = keyframes`
       transform: translateY(0);
     }
 `;
-const Pepper = styled.g``;
 const PepperSmall = styled.g`
   animation: ${move} 2s ease-in-out infinite;
   animation-delay: ${Math.floor(Math.random(0, 3) * 2)}s;
