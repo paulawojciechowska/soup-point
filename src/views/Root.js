@@ -8,6 +8,7 @@ import SignUp from 'components/organisms/SignUp/SignUp';
 import LogIn from 'components/organisms/LogIn/LogIn';
 import Home from 'components/organisms/Home/Home';
 import Order from 'components/organisms/Order/Order';
+import Cart from 'components/organisms/Cart/Cart';
 
 const Root = () => {
   return (
@@ -31,7 +32,7 @@ const Root = () => {
               <Order />
             </Route>
             <Route path="/cart">
-              <h1>cart</h1>
+              <Cart />
             </Route>
           </Switch>
         </InfoPlate>
