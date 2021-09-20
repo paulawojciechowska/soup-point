@@ -1,10 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { NavLink, useHistory } from 'react-router-dom';
 import { Input } from 'components/atoms/Input/Input';
 import { Header } from 'components/atoms/Header/Header';
 import { Button } from 'components/atoms/Button/Button';
 import { Wrapper, StyledParagraph } from './LogIn.styles';
 import { useForm } from 'react-hook-form';
+import { dataContext } from 'providers/DataProvider';
 
 const LogIn = () => {
   const {
@@ -12,8 +13,11 @@ const LogIn = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const { logIn } = useContext(dataContext);
+  let history = useHistory();
   const formSubmit = (data) => {
-    console.log(data);
+    logIn(data.email);
+    history.push('/order');
   };
   return (
     <Wrapper as="form" onSubmit={handleSubmit(formSubmit)}>
@@ -24,7 +28,7 @@ const LogIn = () => {
         Login
       </Button>
       <StyledParagraph>Don't have account yet?</StyledParagraph>
-      <Button grey as={NavLink} to="/sign">
+      <Button grey onClick={() => history.push('/sign')}>
         Create account
       </Button>
     </Wrapper>

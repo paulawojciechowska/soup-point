@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Select from 'components/molecules/Select/Select';
 import { Header } from 'components/atoms/Header/Header';
 import { Input } from 'components/atoms/Input/Input';
@@ -7,6 +7,7 @@ import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 import { Wrapper, Form } from './Order.styles';
 import { flavours, additives } from 'data/formData';
 import { useForm } from 'react-hook-form';
+import { dataContext } from 'providers/DataProvider';
 
 const Order = () => {
   const {
@@ -14,7 +15,10 @@ const Order = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const formSubmit = (data) => console.log(data);
+  const { addOrder } = useContext(dataContext);
+  const formSubmit = (data) => {
+    addOrder(data);
+  };
   return (
     <Wrapper>
       <Header>Make your order</Header>
