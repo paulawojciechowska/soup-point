@@ -1,14 +1,16 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import Select from 'components/molecules/Select/Select';
+// import Select from 'components/molecules/Select/Select';
 import { Header } from 'components/atoms/Header/Header';
 import { Input } from 'components/atoms/Input/Input';
 import { Button } from 'components/atoms/Button/Button';
 import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
-import { Wrapper, Form } from './Order.styles';
-import { flavours, additives } from 'data/formData';
+import { Form } from 'components/atoms/Form/Form';
+import { Wrapper } from './Order.styles';
+// import { flavours, additives } from 'data/formData';
 import { useForm } from 'react-hook-form';
 import { dataContext } from 'providers/DataProvider';
+import SoupForm from 'components/molecules/SoupForm/SoupForm';
 
 const Order = () => {
   const {
@@ -27,13 +29,8 @@ const Order = () => {
       {user ? (
         <>
           <Header>Make your order</Header>
+          <SoupForm />
           <Form onSubmit={handleSubmit(formSubmit)}>
-            <Paragraph small orange>
-              Soup
-            </Paragraph>
-            <Select name="flavour" options={flavours} {...register('flavour', { required: true })} />
-            {errors.flavour && <span role="alert">Pick flavour!</span>}
-            <Select name="additive" options={additives} {...register('additive')} />
             <Paragraph small orange>
               Where to deliver?
             </Paragraph>
