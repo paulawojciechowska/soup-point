@@ -15,12 +15,12 @@ const AdressForm = () => {
     formState: { errors },
   } = useForm();
   let history = useHistory();
-  const { addOrder, soups } = useContext(dataContext);
+  const { addAddress, soups } = useContext(dataContext);
   const formSubmit = (data) => {
     if (!soups.length) {
       return alert('Add soup to the cart!');
     }
-    addOrder(data);
+    addAddress(data);
     history.push('/cart');
   };
   return (

@@ -12,14 +12,14 @@ export const Wrapper = styled.div`
   width: 37vw;
 `;
 const Cart = () => {
-  const { order } = useContext(dataContext);
+  const { address } = useContext(dataContext);
   return (
     <Wrapper>
       <Header>ORDER SUMMARY</Header>
-      <CartInfo title="Soup flavour" content={order[0].flavour} />
-      <CartInfo title="Additives" content={order[0].additive} />
-      <CartInfo title="Delivery Adress" content={`${order[0].street}, ${order[0].number}`} />
-      <CartInfo title="Approximate delivery time" content={order[0].time} />
+      {/* <CartInfo title="Soup flavour" content={order[0].flavour} /> */}
+      {/* <CartInfo title="Additives" content={order[0].additive} /> */}
+      <CartInfo title="Delivery Adress" content={`${address[0].street}, ${address[0].number}`} />
+      <CartInfo title="Approximate delivery time" content={address[0].time} />
       <OrderSoup />
     </Wrapper>
   );

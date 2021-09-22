@@ -11,7 +11,7 @@ export const dataContext = React.createContext({
 
 const DataProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [order, setOrder] = useState([]);
+  const [address, setAddress] = useState([]);
   const [soups, setSoups] = useState([]);
   const logIn = (userName) => {
     setUser(userName);
@@ -19,13 +19,13 @@ const DataProvider = ({ children }) => {
   const logOut = () => {
     setUser(null);
   };
-  const addOrder = (data) => {
-    setOrder([data]);
+  const addAddress = (data) => {
+    setAddress([data]);
   };
   const addSoup = (data) => {
     setSoups([...soups, data]);
   };
-  return <dataContext.Provider value={{ user, logIn, logOut, addOrder, addSoup, soups, order }}>{children}</dataContext.Provider>;
+  return <dataContext.Provider value={{ user, logIn, logOut, addAddress, addSoup, soups, address }}>{children}</dataContext.Provider>;
 };
 
 export default DataProvider;
