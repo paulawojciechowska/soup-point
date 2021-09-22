@@ -24,9 +24,8 @@ const DataProvider = ({ children }) => {
   };
   const addSoup = (data) => {
     setSoups([...soups, data]);
-    console.log('!!!!', soups);
   };
-  return <dataContext.Provider value={{ user, logIn, logOut, addOrder, addSoup, order }}>{children}</dataContext.Provider>;
+  return <dataContext.Provider value={{ user, logIn, logOut, addOrder, addSoup, soups, order }}>{children}</dataContext.Provider>;
 };
 
 export default DataProvider;
